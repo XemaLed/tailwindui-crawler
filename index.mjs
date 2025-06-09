@@ -134,7 +134,11 @@ async function fetchWithRetry(url, retries, options = {}) {
       const elapsed = new Date().getTime() - start
       console.log(`⏱   ${elapsed}ms (${response.status})`)
       if (response.status === 302) {
-        return fetchWithRetry(response.headers.location, retries, options)
+        let location = response.headers.location
+        if (location && !location.startsWith('http')) {
+          location = rootUrl + location
+        }
+        return fetchWithRetry(location, retries, options)
       }
       return response
     } catch (err) {
