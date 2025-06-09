@@ -126,7 +126,7 @@ You can automatically keep a **private** GitHub repository up-to-date with compo
              password: ${{ secrets.TAILWINDUI_PASSWORD }}
    ```
 
-   > NOTE: Make sure to update to the latest action `v1.1.0` to support the crawler v3+
+   > NOTE: Make sure to update to the latest action `v1.3.0` to support the crawler v3+
 
    Read more about the schedule cron syntax in [the official GitHub Actions documentation](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule).
 
@@ -150,7 +150,7 @@ To be emailed whenever there is a change to a component, simply setup [GitHub No
 ## 🚦 Upgrading to v3.
 
 This is a major change. Unfortunately, v2 will no longer work with the existing
-site due to the updates they may to add support for React/Vue components. Please also note that the [GitHub Action](#-automatically-keep-a-private-github-repository-up-to-date) has been updated from `v1.0.0` to `v1.1.0`.
+site due to the updates they may to add support for React/Vue components. Please also note that the [GitHub Action](#-automatically-keep-a-private-github-repository-up-to-date) has been updated from `v1.0.0` to `v1.3.0`.
 
 Currently, there is no support for transformers, as the need for them is not
 as critical since the components don't need to be converted to React or Vue.
